@@ -45,10 +45,6 @@ class _QuizHomeState extends ConsumerState<QuizHome> {
                 },
                 child: const Text('Start Quiz')
             ),
-            Text(
-              'Work in progress',
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
           ],
         ),
       ),

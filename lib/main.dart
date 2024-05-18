@@ -60,10 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Home')
             ),
-            Text(
-              'Work in progress',
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
           ],
         ),
       ),
