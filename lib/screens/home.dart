@@ -12,7 +12,6 @@ class Home extends ConsumerStatefulWidget {
 }
 
 class _HomeState extends ConsumerState<Home> {
-
   // Get quizzes from provider
   List<Quiz> quizzes = [];
 
@@ -29,17 +28,14 @@ class _HomeState extends ConsumerState<Home> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme
-            .of(context)
-            .colorScheme
-            .secondary,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         title: const Text('Quizzotic'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-          //   Card list of the quizzes
+            //   Card list of the quizzes
             Expanded(
               child: ListView.builder(
                 itemCount: quizzes.length,
@@ -51,7 +47,8 @@ class _HomeState extends ConsumerState<Home> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => QuizHome(id: quizzes[index].id),
+                            builder: (context) =>
+                                QuizHome(id: quizzes[index].id),
                           ),
                         );
                       },
@@ -60,7 +57,6 @@ class _HomeState extends ConsumerState<Home> {
                 },
               ),
             ),
-
           ],
         ),
       ),
